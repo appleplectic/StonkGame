@@ -1,8 +1,14 @@
-from pynput import keyboard
+#!/usr/bin/env python3
+# -*- encoding: utf-8 -*-
+# main.py
 
+"""main.py"""
 
-class Stock():
-    def __init__(self, name, symbol, price, industry, per, cap, volume):
+#from pynput import keyboard
+
+class Stock:
+    '''Stock class.'''
+    def __init__(self, name: str, symbol: str, price: int, industry: str, per: str, cap: int, volume: int) -> None:
         self.name = name
         self.price = price
         self.industry = industry
@@ -10,9 +16,8 @@ class Stock():
         self.per = per
         self.cap = cap
         self.volume = volume
-        return
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.name, "(" + self.symbol + ") $" + self.price)
 
 if __name__ == "__main__":
